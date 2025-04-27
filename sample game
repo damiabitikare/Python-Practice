@@ -1,0 +1,24 @@
+def quiz_game():
+    questions = {
+        "What keyword is used to define a function in Python?\n(a) def\n(b) func\n(c) define\n> ": "a",
+        "Which movie features a character named 'Forrest Gump'?\n(a) Inception\n(b) Forrest Gump\n(c) Titanic\n> ": "b",
+        "What is the correct way to comment in Python?\n(a) // comment\n(b) <!-- comment -->\n(c) # comment\n> ": "c"
+    }
+
+    score = 0
+
+    for question, correct_answer in questions.items():
+        answer = input(question).lower()
+        if answer == correct_answer:
+            print("Correct!\n")
+            score += 1
+        else:
+            print("Oops, wrong answer.\n")
+
+    print(f"Your score: {score}/{len(questions)}")
+
+    play_again = input("Wanna play again? (yes/no): ").lower()
+    if play_again == "yes":
+        quiz_game()
+
+quiz_game()
