@@ -1,0 +1,15 @@
+import random
+
+def joke_generator():
+    jokes = [
+        "Why do Python programmers wear glasses? Because they can't C!",
+        "What do you call 8 hobbits? A hobbyte.",
+        "Why did the programmer quit his job? Because he didn't get arrays.",
+        "I told my computer I needed a break, and it said: 'No problem, I'll go to sleep!'",
+        "Why was the JavaScript developer sad? Because he didn't know how to 'null' his feelings."
+    ]
+
+    print("\nHere's a joke for you:")
+    print(random.choice(jokes))
+
+joke_generator()
